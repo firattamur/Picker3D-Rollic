@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;    
     public float moveInput;
 
+    [SerializeField] GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = new Vector3(0, 0, speed);
+    
     }
 
     // Update is called once per frame
@@ -26,8 +28,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        rb.velocity = new Vector3(moveInput * speed, rb.velocity.y, speed);
+        
+        if (gameController.GetState() == GameState.PLAY)
+            rb.velocity = new Vector3(moveInput * speed, rb.velocity.y, speed);
 
     }
 
