@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     
     [SerializeField] MenuController menuController;
+    [SerializeField] LevelController levelController;
     [SerializeField] float dragThresholdforStart = 0.10f;
 
     private GameState gameState;
@@ -55,7 +56,7 @@ public class GameController : MonoBehaviour
         return gameState;
     }
 
-    private void StartGame()
+    public void StartGame()
     {
 
         // remove menu elements before start game
@@ -66,16 +67,27 @@ public class GameController : MonoBehaviour
 
     }
 
-    private void LoseGame()
+    public void LevelPassed()
+    {
+
+        // set level achieved level number
+        int currentLevelNumber = DBController.instance.GetLevelNumber();
+        currentLevelNumber++;
+
+        DBController.instance.SetLevelNumber(currentLevelNumber++);
+        levelController.LoadNewLevel();
+
+    }
+
+    public void LoseGame()
     {
 
         // pause game and bring lose screen elements
+        menuController.DisplayMenuElements();
         
-
         // change state to lose
         gameState = GameState.LOSE;
         
     }
-
 
 }
