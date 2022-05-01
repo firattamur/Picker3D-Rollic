@@ -50,13 +50,17 @@ public class LevelController : MonoBehaviour
     {
 
         if (other.tag == "Player")
+        {
             GameController.instance.SetState(GameState.POOL);
+            Invoke("CheckIfLevelPassed", 3);
+        }  
         else
+        {
             collectedLevelObjectsCount++;
+        }
+            
 
         requiredLevelObjectCountText.text = collectedLevelObjectsCount.ToString() + "/" + requiredLevelObjectCount.ToString();
-
-        Invoke("CheckIfLevelPassed", 3);
 
     }
 
@@ -70,8 +74,8 @@ public class LevelController : MonoBehaviour
             poolTop.SetActive(true);
 
             // FIXME: rotation make object skewed this is because gate built from cylinder and cube which parent scale is not uniform
-            poolGateLeft.transform.Rotate(  new Vector3(0, -10.0f, 0) );
-            poolGateRight.transform.Rotate( new Vector3(0, -10.0f, 0) );
+            poolGateLeft.transform.Rotate(  new Vector3(0, -45.0f, 0) );
+            poolGateRight.transform.Rotate( new Vector3(0, -45.0f, 0) );
 
             // TODO: add level unlock increase number of level with game controller
             GameController.instance.SetState(GameState.PLAY);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4160033225898051055}
   - component: {fileID: 4160033225898051052}
   - component: {fileID: 4160033225898051053}
-  - component: {fileID: 4160033225898051054}
+  - component: {fileID: 3510914621534935155}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -80,19 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4160033225898051054
+--- !u!65 &3510914621534935155
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4160033225898051056}
-  m_Material: {fileID: 13400000, guid: a34943f2d0e824064809f9637c3f39e0, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000004}
+  m_Center: {x: 0, y: 0, z: -0.00000047683716}
 --- !u!1 &4160033226118032184
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,10 +104,10 @@ GameObject:
   - component: {fileID: 4160033226118032183}
   - component: {fileID: 4160033226118032180}
   - component: {fileID: 4160033226118032181}
-  - component: {fileID: 4160033226118032182}
+  - component: {fileID: 3666241484738744723}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,18 +173,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4160033226118032182
+--- !u!65 &3666241484738744723
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4160033226118032184}
-  m_Material: {fileID: 13400000, guid: a34943f2d0e824064809f9637c3f39e0, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000004}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4160033227173854342
 GameObject:
@@ -281,8 +281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.0093592}
+  m_Center: {x: 0, y: 0, z: 0.00467781}
 --- !u!54 &4160033227173854341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -293,12 +293,12 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &4160033227173854336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4160033227173854341}
-  speed: 10
+  speed: 7
   moveInput: 0
   gameController: {fileID: 0}
