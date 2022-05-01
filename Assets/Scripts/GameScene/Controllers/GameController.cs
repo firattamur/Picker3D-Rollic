@@ -10,6 +10,21 @@ public class GameController : MonoBehaviour
 
     private GameState gameState;
 
+    public static GameController instance;
+
+    // Singleton Initialization
+    void Awake()
+    {
+        if (!GameController.instance)
+        {
+            GameController.instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -30,7 +45,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    void SetState(GameState state)
+    public void SetState(GameState state)
     {
         gameState = state;
     }

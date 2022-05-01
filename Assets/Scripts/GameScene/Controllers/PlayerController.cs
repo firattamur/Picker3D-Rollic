@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
         if (gameController.GetState() == GameState.PLAY)
             rb.velocity = new Vector3(moveInput * speed, rb.velocity.y, speed);
 
+        if (gameController.GetState() == GameState.POOL)
+            rb.velocity = Vector3.zero;
+
     }
 
 }
