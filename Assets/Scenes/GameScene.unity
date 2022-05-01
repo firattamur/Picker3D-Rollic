@@ -946,8 +946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d524acb80eca46e2b9163a0d5505ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1488988318}
-  offsetPosition: {x: 0, y: 2.33, z: -5.5}
+  offset: {x: 0, y: 2, z: -4}
+  smoothness: 2
+  targetTransform: {fileID: 1488988318}
 --- !u!1 &1290133495
 GameObject:
   m_ObjectHideFlags: 0
