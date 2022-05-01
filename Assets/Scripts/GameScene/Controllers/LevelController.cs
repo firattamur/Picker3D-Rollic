@@ -29,14 +29,6 @@ public class LevelController : MonoBehaviour
     void SetLevel()
     {
 
-        // foreach (GameLevelObject obj in gameLevel.levelObjects)
-        // {
-
-        //     GameObject levelObject = Instantiate(GameLevelManager.instance.GetPrefabForType(obj.type), obj.position, obj.rotation);
-        //     levelObjects.Add(levelObject);
-
-        // }
-
         levelTitleText.text = gameObject.name;
         requiredLevelObjectCountText.text = "00/" + requiredLevelObjectCount.ToString();
 
@@ -63,6 +55,8 @@ public class LevelController : MonoBehaviour
             collectedLevelObjectsCount++;
 
         requiredLevelObjectCountText.text = collectedLevelObjectsCount.ToString() + "/" + requiredLevelObjectCount.ToString();
+
+        Invoke("CheckIfLevelPassed", 3);
 
     }
 

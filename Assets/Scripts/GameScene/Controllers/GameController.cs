@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     {
         
         // if horizontal move then start game
-        if (Input.GetAxis("Horizontal") > dragThresholdforStart){
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) > dragThresholdforStart){
             StartGame();
         }
 
