@@ -7,27 +7,42 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {   
 
-    [SerializeField] RectTransform gameTitle;  
-    [SerializeField] RectTransform handGuide;
-    [SerializeField] RectTransform restartButton;
-    [SerializeField] RectTransform levelNumberTitle;
+    [SerializeField] RectTransform gameTitleRT;  
+    [SerializeField] RectTransform handGuideRT;
+    [SerializeField] RectTransform restartButtonRT;
+    [SerializeField] RectTransform levelNumberTitleRT;
 
+    [SerializeField] TextMeshProUGUI levelNumberText;
+
+    void Start()
+    {
+
+        levelNumberText.text = "Level: " + DBController.instance.GetLevelNumber().ToString();
+
+    }
 
     public void DisplayMenuElements()
     {
 
-        LeanTween.moveY(gameTitle, -320, 1.0f).setEaseOutExpo();
-        LeanTween.moveY(handGuide, 164, 1.0f).setEaseOutExpo();
-        LeanTween.moveY(levelNumberTitle, -500, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(gameTitleRT, -320, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(handGuideRT, 164, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(levelNumberTitleRT, -500, 1.0f).setEaseOutExpo();
 
     }
 
     public void UnDisplayMenuElements()
     {
 
-        LeanTween.moveY(gameTitle, 320, 1.0f).setEaseOutExpo();
-        LeanTween.moveY(handGuide, -164, 1.0f).setEaseOutExpo();
-        LeanTween.moveY(levelNumberTitle, -128, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(gameTitleRT, 320, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(handGuideRT, -164, 1.0f).setEaseOutExpo();
+        LeanTween.moveY(levelNumberTitleRT, -128, 1.0f).setEaseOutExpo();
+
+    }
+
+    public void UpdateLevelNumberText()
+    {
+
+        levelNumberText.text = "Level: " + DBController.instance.GetLevelNumber().ToString();
 
     }
 

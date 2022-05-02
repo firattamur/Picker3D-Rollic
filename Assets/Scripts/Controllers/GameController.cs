@@ -40,9 +40,8 @@ public class GameController : MonoBehaviour
     {
         
         // if horizontal move then start game
-        if (Mathf.Abs(Input.GetAxis("Horizontal")) > dragThresholdforStart && gameState == GameState.MENU){
-            StartGame();
-        }
+        if (Input.touchCount > 0 && gameState == GameState.MENU)
+            StartGame();        
 
     }
 
@@ -74,8 +73,17 @@ public class GameController : MonoBehaviour
         int currentLevelNumber = DBController.instance.GetLevelNumber();
         currentLevelNumber++;
 
+        // save player level number
         DBController.instance.SetLevelNumber(currentLevelNumber++);
+
+        // load new level
         levelController.LoadNewLevel();
+
+        // update level number text
+        menuController.UpdateLevelNumberText();
+
+        // change state to play to start game
+        gameState = GameState.PLAY;
 
     }
 
@@ -84,9 +92,13 @@ public class GameController : MonoBehaviour
 
         // pause game and bring lose screen elements
         menuController.DisplayMenuElements();
-        
+
+        levelController.DestroyAllLevels();
+        levelController.LoadInitialLevels();
+    
         // change state to lose
-        gameState = GameState.LOSE;
+        gameState = GameState.MENU;
+
         
     }
 

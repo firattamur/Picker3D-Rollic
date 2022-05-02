@@ -45,17 +45,18 @@ public class GameLevel : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
+        Debug.Log(other.tag);
+
         if (other.tag == "Player")
         {
+            Invoke("CheckIfLevelPassed", 2);
             GameController.instance.SetState(GameState.POOL);
-            Invoke("CheckIfLevelPassed", 3);
         }  
         else
         {
             collectedLevelObjectsCount++;
         }
             
-
         requiredLevelObjectCountText.text = collectedLevelObjectsCount.ToString() + "/" + requiredLevelObjectCount.ToString();
 
     }
@@ -74,7 +75,7 @@ public class GameLevel : MonoBehaviour
             poolGateRight.transform.Rotate( new Vector3(0, -90.0f, 0) );
 
             // TODO: add level unlock increase number of level with game controller
-            GameController.instance.SetState(GameState.PLAY);
+            GameController.instance.LevelPassed();
 
         }
         else
