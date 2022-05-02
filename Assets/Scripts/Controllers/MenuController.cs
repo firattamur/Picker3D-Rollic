@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] RectTransform gameTitleRT;  
     [SerializeField] RectTransform handGuideRT;
     [SerializeField] RectTransform restartButtonRT;
+    [SerializeField] RectTransform continueButtonRT;
     [SerializeField] RectTransform levelNumberTitleRT;
 
     [SerializeField] TextMeshProUGUI levelNumberText;
@@ -38,6 +39,38 @@ public class MenuController : MonoBehaviour
         LeanTween.moveY(levelNumberTitleRT, -128, 1.0f).setEaseOutExpo();
 
     }
+
+    public void DisplayLoseScreenElements()
+    {
+
+        LeanTween.moveY(restartButtonRT,  450, 1.0f).setEaseOutExpo();
+        
+    }
+
+
+    public void UndisplayLoseScreenElements()
+    {
+
+        LeanTween.moveY(restartButtonRT,  -1000, 1.0f).setEaseOutExpo();
+
+    }
+
+
+    public void DisplayLevelPassedElements()
+    {
+
+        LeanTween.moveY(continueButtonRT, -550, 1.0f).setEaseOutExpo();
+
+    }
+
+
+    public void UndisplayLevelPassedElements()
+    {
+
+        LeanTween.moveY(continueButtonRT, 0, 1.0f).setEaseOutExpo();
+
+    }
+
 
     public void UpdateLevelNumberText()
     {

@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     
     [SerializeField] MenuController menuController;
     [SerializeField] LevelController levelController;
+    [SerializeField] PlayerController playerController;
     [SerializeField] float dragThresholdforStart = 0.10f;
 
     private GameState gameState;
@@ -83,6 +84,31 @@ public class GameController : MonoBehaviour
         menuController.UpdateLevelNumberText();
 
         // change state to play to start game
+        menuController.DisplayLevelPassedElements();
+
+    }
+
+    public void ContinueLevel()
+    {
+
+        // remove button from screen
+        menuController.UndisplayLevelPassedElements();
+
+        gameState = GameState.PLAY;
+    
+    }
+
+    public void RestartLevel()
+    {
+
+        levelController.DestroyAllLevels();
+        levelController.LoadInitialLevels();
+    
+        // pause game and bring lose screen elements
+        menuController.UndisplayLoseScreenElements();
+        playerController.PlayerPositionReset();
+
+        // change state to lose
         gameState = GameState.PLAY;
 
     }
@@ -91,14 +117,7 @@ public class GameController : MonoBehaviour
     {
 
         // pause game and bring lose screen elements
-        menuController.DisplayMenuElements();
-
-        levelController.DestroyAllLevels();
-        levelController.LoadInitialLevels();
-    
-        // change state to lose
-        gameState = GameState.MENU;
-
+        menuController.DisplayLoseScreenElements();
         
     }
 

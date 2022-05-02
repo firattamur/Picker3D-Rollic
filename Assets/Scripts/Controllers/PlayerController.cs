@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
             fingerUp = fingerDown;
 
         }else {
-            horizontalSpeed = 0.0f;
+            horizontalSpeed *= 0.20f;
         }
 
     }

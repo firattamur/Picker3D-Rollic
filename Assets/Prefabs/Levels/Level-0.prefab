@@ -274,6 +274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &1294485292658023808
@@ -757,6 +762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &3923223448115898595
@@ -1033,6 +1043,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &5525470680246657954
@@ -1171,6 +1186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &6693376075626745319
@@ -1249,6 +1269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909220629859103194, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f838b4758b454526bf6d6e3f9d8ae8c, type: 3}
@@ -1394,6 +1419,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &8054421390759226960
@@ -1462,6 +1492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CUBE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
@@ -1601,6 +1636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CUBE (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
 --- !u!1001 &8828340460821640892
@@ -1669,6 +1709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CUBE (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619900888761565861, guid: 7f3adc855d7c94fada82cb146646c337,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f3adc855d7c94fada82cb146646c337, type: 3}
