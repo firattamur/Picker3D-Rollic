@@ -1183,7 +1183,7 @@ PrefabInstance:
     - target: {fileID: 3192935742604869097, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
       propertyPath: m_text
-      value: 00/25
+      value: 00/35
       objectReference: {fileID: 0}
     - target: {fileID: 4152140326458536375, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
@@ -1193,7 +1193,7 @@ PrefabInstance:
     - target: {fileID: 5725593368960189230, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
       propertyPath: requiredLevelObjectCount
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6998755330642428712, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}

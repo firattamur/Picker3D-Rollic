@@ -10981,12 +10981,12 @@ PrefabInstance:
     - target: {fileID: 3192935742604869097, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
       propertyPath: m_text
-      value: 00/55
+      value: 00/70
       objectReference: {fileID: 0}
     - target: {fileID: 5725593368960189230, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
       propertyPath: requiredLevelObjectCount
-      value: 55
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6998755330642428712, guid: 0f838b4758b454526bf6d6e3f9d8ae8c,
         type: 3}
