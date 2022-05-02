@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     private Vector3 newSmoothedPosition;
     
     // Update is called once per frame
-    void LateUpdate() {
+    void FixedUpdate() {
 
         newPosition         = targetTransform.position + offset;
         newSmoothedPosition = Vector3.Lerp(transform.position, newPosition, smoothness * Time.deltaTime);
